@@ -6,11 +6,13 @@ Here’s a project I’m sharing with you. You’re invited to contribute by sug
 
 How to Modify My Project on GitHub Clone the Project: If you don't have the project locally, start by cloning it from GitHub to your computer. This will copy all the project content into a local folder.
 
-bash: git clone https://github.com/my-username/my-project.git
+`bash:
+git clone https://github.com/my-username/my-project.git`
 
 Create a New Branch: Before making any changes, create a new branch to work on your updates without affecting the main branch (main or master). Use a descriptive branch name to organize your work better.
 
-bash: git checkout -b my-branch-name
+`bash:
+git checkout -b my-branch-name`
 
 Make Your Changes: Now, make the necessary modifications to your project locally. This could be adding new features, fixing bugs, or updating code.
 
