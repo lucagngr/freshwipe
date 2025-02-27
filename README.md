@@ -1,5 +1,13 @@
 # freshwipe
- website features for server ranking, user authentication, real-time connected users, and live map integration. Users can now add servers, rate them, and view real-time stats."
+ This site lists Rust game servers with a rating system and a blog to help players and streamers.
+
+Too many platforms list empty or fake servers, highlighting the need for a reliable and high-quality directory."
+
+# MVP:
+Retrieve the BattleMetrics API to list, sort, and display Rust servers.
+Integrate a Steam login system.
+Add a server rating system.
+Implement CRUD to manage favorites and allow creators to add servers, subject to admin approval.
 
 English: 
 Here’s a project I’m sharing with you. You’re invited to contribute by suggesting corrections, ideas, or even adding a touch of humor. Any suggestions are welcome to improve it and make it more interesting!
@@ -59,6 +67,16 @@ By following these steps, you can easily modify your project on GitHub while kee
 thanks you and good job :) your the best ! 😊
 
 francais:
+# freshwipe
+Ce site répertorie les serveurs du jeu vidéo Rust avec un système de notation et un blog pour aider les joueurs et les streamers.
+
+Trop de plateformes listent des serveurs vides ou faux, d’où la nécessité d’un répertoire fiable et de qualité.
+
+# MVP :
+Récupérer l'API de BattleMetrics pour lister, trier et afficher les serveurs Rust.
+Intégrer un système de connexion via Steam.
+Ajouter un système de notation des serveurs.
+CRUD pour gérer les favoris et permettre aux créateurs d'ajouter des serveurs, soumis à validation par un admin.
 
 Ce project freshwipe que je partage avec vous. N'hésitez pas à ajouter votre touche personnelle à apporter des coorectif des idée tout ce qui vous fait envie, Toute modification, même humoristique, sera appréciée !
 
