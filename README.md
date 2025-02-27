@@ -9,7 +9,7 @@ Integrate a Steam login system.
 Add a server rating system.
 Implement CRUD to manage favorites and allow creators to add servers, subject to admin approval.
 
-English: 
+# Tutorial English: 
 Here’s a project I’m sharing with you. You’re invited to contribute by suggesting corrections, ideas, or even adding a touch of humor. Any suggestions are welcome to improve it and make it more interesting!
 
 How to Modify My Project on GitHub Clone the Project: If you don't have the project locally, start by cloning it from GitHub to your computer. This will copy all the project content into a local folder.
@@ -66,7 +66,7 @@ By following these steps, you can easily modify your project on GitHub while kee
 
 thanks you and good job :) your the best ! 😊
 
-francais:
+
 # freshwipe
 Ce site répertorie les serveurs du jeu vidéo Rust avec un système de notation et un blog pour aider les joueurs et les streamers.
 
@@ -78,6 +78,7 @@ Intégrer un système de connexion via Steam.
 Ajouter un système de notation des serveurs.
 CRUD pour gérer les favoris et permettre aux créateurs d'ajouter des serveurs, soumis à validation par un admin.
 
+# Tutoriel francais:
 Ce project freshwipe que je partage avec vous. N'hésitez pas à ajouter votre touche personnelle à apporter des coorectif des idée tout ce qui vous fait envie, Toute modification, même humoristique, sera appréciée !
 
 Comment Modifier Mon Projet sur GitHub Cloner le Projet : Si vous n'avez pas le projet en local, commencez par le cloner depuis GitHub sur votre ordinateur. Cela copiera tout le contenu du projet dans un dossier local.
