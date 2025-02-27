@@ -5,6 +5,20 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
-    "mongoose": "^8.10.2"
-  }
+    "jsdom": "^26.0.0",
+    "mongoose": "^8.10.2",
+    "node": "^23.9.0",
+    "node-fetch": "^2.7.0"
+  },
+  "name": "freshwipe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
