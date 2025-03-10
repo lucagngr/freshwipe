@@ -23,6 +23,7 @@ nav {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--gold);
 }
 
 nav ul {
@@ -38,12 +39,82 @@ nav li {
     cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
+    color: var(--gold);
+    position: relative;
 }
 
 nav li:hover {
     background-color: var(--gold);
     color: var(--deep-black);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--dark-purple);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    z-index: 1001;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: var(--light-gray);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--steel-blue);
+    color: var(--highlight-gold);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: dropdownFade 0.3s ease;
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(to bottom, var(--dark-purple), var(--deep-black));
+    border-bottom: 1px solid var(--gold);
+}
+
+header h1 {
+    color: var(--highlight-gold);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--light-gray);
+    font-size: 1.1rem;
 }
 
 main {
@@ -68,6 +139,19 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.server::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(212, 175, 55, 0.05), transparent 70%);
+    pointer-events: none;
 }
 
 .server:hover {
@@ -82,12 +166,14 @@ main {
     font-size: 1.2rem;
     font-weight: 600;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    position: relative;
 }
 
 .server p {
     margin: 0;
     color: var(--light-gray);
     font-size: 0.9rem;
+    position: relative;
 }
 
 .server-stats {
@@ -95,9 +181,11 @@ main {
     justify-content: space-between;
     align-items: center;
     background: rgba(0, 0, 0, 0.2);
-    padding: 0.5rem;
+    padding: 0.8rem;
     border-radius: 4px;
     margin-top: 0.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    position: relative;
 }
 
 footer {
@@ -105,6 +193,7 @@ footer {
     padding: 2rem;
     text-align: center;
     margin-top: auto;
+    border-top: 1px solid var(--gold);
 }
 
 footer a {
@@ -123,6 +212,12 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        margin-top: 0.5rem;
     }
 
     #server-list {

@@ -1,10 +1,8 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshWipe</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Serveurs Officiels</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <nav>
@@ -26,12 +24,13 @@
         </ul>
     </nav>
 
-    <header>
-        <h1>FreshWipe</h1>
-        <p>Vous avez du mal à trouver un serveur ? Avec FreshWipe, plus de mauvaises surprises ! Trouvez facilement un serveur officiel, communautaire ou moddé grâce à un système de notes fiable et un blog dédié pour aider les nouveaux joueurs.</p>
-    </header>
-
     <main>
+        <h2>Serveurs Officiels</h2>
+        <div class="filters">
+            <input type="number" id="minPlayers" placeholder="Minimum de joueurs" min="0">
+            <input type="text" id="searchQuery" placeholder="Rechercher un serveur...">
+            <button id="applyFilters">Filtrer</button>
+        </div>
         <div id="server-list"></div>
     </main>
 
@@ -40,7 +39,7 @@
         <a href="https://github.com/lucagngr">GitHub</a>
         <a href="https://www.linkedin.com/in/luca-gngr-238a20330/">LinkedIn</a>
     </footer>
-
-    <script src="/index"></script>
+    <div id="server-list"></div>
+    <script src="..\js\official.js"></script>
 </body>
 </html>
