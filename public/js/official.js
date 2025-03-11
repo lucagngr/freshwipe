@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fetchServers = (filters = {}) => {
         const queryParams = new URLSearchParams({
-            minPlayers: filters.minPlayers || 10,
+            minPlayers: filters.minPlayers || 100,
             search: filters.search || ''
         });
 

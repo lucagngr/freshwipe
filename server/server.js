@@ -15,7 +15,9 @@ app.get('/api/servers', async (req, res) => {
     try {
         const apiKey = process.env.API_KEY;
         const minPlayers = req.query.minPlayers || 10;
-        const countries = req.query.countries ? req.query.countries.split(',') : ['GB', 'US', 'CA'];
+        const countries = req.query.countries ? req.query.countries.split(',') : ['GB', 'US', 'CA', 'FR', 'RU', 'AU', 'DE'
+            
+        ];
 
         const cacheKey = `servers_${minPlayers}_${countries.join(',')}`;
         const cachedData = cache.get(cacheKey);
@@ -48,7 +50,7 @@ app.get('/api/servers/official', async (req, res) => {
     try {
         const apiKey = process.env.API_KEY;
         const minPlayers = req.query.minPlayers || 10;
-        const countries = ['GB', 'US', 'CA'];
+        const countries = ['GB', 'US', 'CA',];
 
         const cacheKey = `servers_official_${minPlayers}`;
         const cachedData = cache.get(cacheKey);
