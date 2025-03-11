@@ -15,9 +15,7 @@ app.get('/api/servers', async (req, res) => {
     try {
         const apiKey = process.env.API_KEY;
         const minPlayers = req.query.minPlayers || 10;
-        const countries = req.query.countries ? req.query.countries.split(',') : ['GB', 'US', 'CA', 'FR', 'RU', 'AU', 'DE'
-            
-        ];
+        const countries = req.query.countries ? req.query.countries.split(',') : ['GB', 'US', 'CA', 'FR', 'RU', 'AU', 'DE'];
 
         const cacheKey = `servers_${minPlayers}_${countries.join(',')}`;
         const cachedData = cache.get(cacheKey);
@@ -37,6 +35,7 @@ app.get('/api/servers', async (req, res) => {
         }
 
         const data = await response.json();
+        data.data.sort((a, b) => b.attributes.players - a.attributes.players);
         cache.set(cacheKey, data);
         res.json(data);
     } catch (error) {
@@ -50,7 +49,7 @@ app.get('/api/servers/official', async (req, res) => {
     try {
         const apiKey = process.env.API_KEY;
         const minPlayers = req.query.minPlayers || 10;
-        const countries = ['GB', 'US', 'CA',];
+        const countries = ['GB', 'US', 'CA', 'FR', 'RU', 'AU', 'DE'];
 
         const cacheKey = `servers_official_${minPlayers}`;
         const cachedData = cache.get(cacheKey);
@@ -70,6 +69,7 @@ app.get('/api/servers/official', async (req, res) => {
         }
 
         const data = await response.json();
+        data.data.sort((a, b) => b.attributes.players - a.attributes.players);
         cache.set(cacheKey, data);
         res.json(data);
     } catch (error) {
@@ -83,7 +83,7 @@ app.get('/api/servers/modded', async (req, res) => {
     try {
         const apiKey = process.env.API_KEY;
         const minPlayers = req.query.minPlayers || 10;
-        const countries = ['GB', 'US', 'CA'];
+        const countries = ['GB', 'US', 'CA', 'FR', 'RU', 'AU', 'DE'];
 
         const cacheKey = `servers_modded_${minPlayers}`;
         const cachedData = cache.get(cacheKey);
@@ -103,6 +103,7 @@ app.get('/api/servers/modded', async (req, res) => {
         }
 
         const data = await response.json();
+        data.data.sort((a, b) => b.attributes.players - a.attributes.players);
         cache.set(cacheKey, data);
         res.json(data);
     } catch (error) {
@@ -116,7 +117,7 @@ app.get('/api/servers/community', async (req, res) => {
     try {
         const apiKey = process.env.API_KEY;
         const minPlayers = req.query.minPlayers || 10;
-        const countries = ['GB', 'US', 'CA'];
+        const countries = ['GB', 'US', 'CA', 'FR', 'RU', 'AU', 'DE'];
 
         const cacheKey = `servers_community_${minPlayers}`;
         const cachedData = cache.get(cacheKey);
@@ -136,8 +137,17 @@ app.get('/api/servers/community', async (req, res) => {
         }
 
         const data = await response.json();
+        data.data.sort((a, b) => b.attributes.players - a.attributes.players);
+        // Filtre pour ne garder que les serveurs communautaires
+        data.data = data.data.filter(server => 
+            server.attributes.name.toLowerCase().includes('community') ||
+            (server.attributes.tags && server.attributes.tags.includes('community')) &&
+            (!server.attributes.tags || !server.attributes.tags.includes('modded')) &&
+            (!server.attributes.details || !server.attributes.details["oxide.version"])
+        );
         cache.set(cacheKey, data);
         res.json(data);
+
     } catch (error) {
         console.error('Error:', error);
         res.status(500).json({ error: 'Server Error', details: error.message });

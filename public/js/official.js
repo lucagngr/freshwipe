@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
             search: filters.search || ''
         });
 
+        
+
         fetch(`/api/servers/official?${queryParams}`)
             .then(response => {
                 if (!response.ok) {
@@ -45,3 +47,4 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchServers(filters);
     });
 });
+
