@@ -132,19 +132,6 @@ app.get('/api/servers/community', async (req, res) => {
             headers: { 'Authorization': `Bearer ${apiKey}` }
         });
 
-        if (!response.ok) {
-            throw new Error(`BattleMetrics API error: ${response.status}`);
-        }
-
-        const data = await response.json();
-        data.data.sort((a, b) => b.attributes.players - a.attributes.players);
-        // Filtre pour ne garder que les serveurs communautaires
-        data.data = data.data.filter(server => 
-            server.attributes.name.toLowerCase().includes('community') ||
-            (server.attributes.tags && server.attributes.tags.includes('community')) &&
-            (!server.attributes.tags || !server.attributes.tags.includes('modded')) &&
-            (!server.attributes.details || !server.attributes.details["oxide.version"])
-        );
         cache.set(cacheKey, data);
         res.json(data);
 
