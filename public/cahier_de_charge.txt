@@ -1,6 +1,6 @@
 1. Présentation du projet
 Nom du projet : FreshWipe
-Description : FreshWipe est un site web permettant d'afficher des serveurs Rust en utilisant l'API BattleMetrics. L'objectif est de fournir aux joueurs une interface claire et ergonomique pour rechercher et suivre leurs serveurs préférés.
+Description : FreshWipe est un site web permettant d'afficher des serveurs Rust en utilisant l'API BattleMetrics. L'objectif est de fournir aux joueurs une interface claire et ergonomique pour rechercher, suivre et noter leurs serveurs préférés.
 
 2. Objectifs
 Permettre la recherche et l'affichage de serveurs Rust.
@@ -9,6 +9,7 @@ Offrir une interface intuitive et réactive.
 Mettre en place un système de favoris pour les utilisateurs.
 Permettre aux utilisateurs de se connecter pour noter les serveurs.
 Assurer un temps de chargement rapide et une bonne performance.
+
 3. Fonctionnalités
 3.1. Affichage des serveurs Rust
 Récupération des données via l'API BattleMetrics.
@@ -18,41 +19,52 @@ Nombre de joueurs en ligne
 Statut du serveur (en ligne/hors ligne)
 Date et heure du dernier wipe
 Type de serveur (moddé/vanilla)
+
 3.2. Recherche et filtres
 Recherche par nom de serveur.
 Filtrage par nombre de joueurs.
 Filtrage par type de serveur.
 Tri des résultats (ex : par popularité, par date de wipe).
+
 3.3. Gestion des favoris
 Permettre aux utilisateurs de sauvegarder leurs serveurs favoris.
 Stockage local via cookies ou base de données.
+
 3.4. Connexion des utilisateurs (MVP)
 Authentification via email/mot de passe ou OAuth (Google, Discord, etc.).
 Gestion des comptes utilisateurs.
 Interface pour se connecter/déconnecter.
+
 3.5. Notation des serveurs (MVP)
 Permettre aux utilisateurs connectés de noter les serveurs.
 Stocker les notes en base de données.
 Afficher une note moyenne pour chaque serveur.
 Limiter une note par utilisateur et par serveur.
+
 3.6. Interface utilisateur
 Design responsive pour une compatibilité mobile et desktop.
 Affichage clair des informations.
 Chargement rapide des données.
-4. Technologies utilisées (Mise à jour)
+
+
+4. Technologies utilisées
 Frontend : HTML, CSS, JavaScript (avec un framework si nécessaire, ex : React ou Vue.js).
 Backend : Node.js avec Express.
 Base de données : MySQL (pour gérer les utilisateurs, notes et favoris) et MongoDB (si nécessaire pour certaines fonctionnalités).
 API : BattleMetrics pour récupérer les données des serveurs Rust.
+
 5. Hébergement et déploiement
-Hébergement du site : (ex : Vercel, Netlify, VPS...)
-Base de données : (ex : MySQL sur un serveur dédié ou via un service comme PlanetScale, RDS...)
+Hébergement du site : Raspberry Pi
+Nom de domaine : OVH
+Base de données : MySQL 
 Gestion du code : GitHub
+
 6. Contraintes et exigences
 Respect des bonnes pratiques de développement web.
 Temps de réponse optimisé pour la récupération des données.
 Interface simple et efficace.
 Sécurité des données utilisateurs.
+
 7. Évolutions possibles
 Ajout d'un blog pour aider les joueurs et streamers avec des guides, astuces et actualités.
 Intégration d’un système de comptes utilisateurs avancé.

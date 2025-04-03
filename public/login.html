@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - FreshWipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="accueil">
+                <div class="home">
+                    <a href="index.html">Accueil</a>
+                </div>
+            </li>
+            <li id="serveur">Serveur</li>
+            <li id="wipe" class="dropdown">
+                Wipe
+                <div class="dropdown-content">
+                    <a href="pages/official.html">Officiel</a>
+                    <a href="pages/community.html">Communautaire</a>
+                    <a href="pages/modded.html">Moddé</a>
+                </div>
+            </li>
+            <li id="prochain-wipe">Prochain Wipe</li>
+            <li id="blog">Blog</li>
+            <li id="contact">Contact</li>
+             <li id="wipe" class="dropdown">
+                Connexion
+                <div class="dropdown-content">
+                    <a href="/login.html">Connexion</a>
+                    <a href="/registrer.html">Inscription</a>
+                </div></li>
+        </ul>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Connexion</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+            <p>Vous n'avez pas de compte ? <a href="registrer.html">S'inscrire</a></p>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>
