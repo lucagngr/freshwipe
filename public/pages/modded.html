@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Serveurs Moddés</title>
-    <link rel="stylesheet" href="../styles.css">
-    <script src="/js/index.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serveurs Moddés - FreshWipe</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../js/navbar.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li id="accueil">
-                <div class="home">
-                    <a href="../index.html">Accueil</a>
-                </div>
-            </li>
-            <li id="serveur">Serveur</li>
-            <li id="wipe" class="dropdown">
-                Wipe
-                <div class="dropdown-content">
-                    <a href="official.html">Officiel</a>
-                    <a href="community.html">Communautaire</a>
-                    <a href="modded.html">Moddé</a>
-                </div></li>
-            <li id="prochain-wipe">Prochain Wipe</li>
-            <li id="blog">Blog</li>
-            <li id="contact">Contact</li>
-            <li id="wipe" class="dropdown">
-                Connexion
-                <div class="dropdown-content">
-                    <a href="../login.html">Connexion</a>
-                    <a href="../registrer.html">Inscription</a>
-                </div></li>
-        </ul>
-    </nav>
-
-    <main>
-        <h2>Serveurs moddés</h2>
-        <div class="filters">
-            <input type="number" id="minPlayers" placeholder="Minimum de joueurs" min="0">
-            <input type="text" id="searchQuery" placeholder="Rechercher un serveur...">
-            <button id="applyFilters">Filtrer</button>
+  <nav>
+    <ul>
+      <li id="accueil">
+        <div class="home">
+          <a href="../index.html">Accueil</a>
         </div>
-        <div id="server-list"></div>
-    </main>
-
-    <footer>
-        <a href="mailto:lglucagngr@gmail.com">Mail</a>
-        <a href="https://github.com/lucagngr">GitHub</a>
-        <a href="https://www.linkedin.com/in/luca-gngr-238a20330/">LinkedIn</a>
-    </footer>
+      </li>
+      <li id="wipe" class="dropdown">
+        <div class="dropdown-toggle">Serveur</div>
+        <div class="dropdown-content">
+          <a href="official.html">Officiel</a>
+          <a href="community.html">Communautaire</a>
+          <a href="modded.html">Moddé</a>
+        </div>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+      <li id="connexion" class="dropdown">
+        <div class="dropdown-toggle">Connexion</div>
+        <div class="dropdown-content">
+          <a href="../login.html">Connexion</a>
+          <a href="../registrer.html">Inscription</a>
+        </div>
+      </li>
+      <li id="user-info" class="user-dropdown">
+        <img src="/rust_hazmat_player.png" alt="Utilisateur" class="nav-avatar" />
+        <a href="/account.html"><span id="username">Mon compte</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/account.html">Mes favoris</a></li>
+          <li><a href="#" id="logout">Déconnexion</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Serveurs Moddés</h2>
+    <div class="filters">
+      <input type="number" id="minPlayers" placeholder="Minimum de joueurs" min="0">
+      <input type="text" id="searchQuery" placeholder="Rechercher un serveur...">
+      <button id="applyFilters">Filtrer</button>
+    </div>
     <div id="server-list"></div>
-    <script src="../js/modded.js"></script>
+  </main>
+
+  <footer id="contact">
+  <a href="mailto:lglucagngr@gmail.com">Mail</a>
+  <a href="https://github.com/lucagngr">GitHub</a>
+  <a href="https://www.linkedin.com/in/luca-gngr-238a20330/">LinkedIn</a>
+</footer>
+
+
+  <script src="../js/modded.js"></script>
+  <script src="/js/auth.js"></script>
 </body>
 </html>

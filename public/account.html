@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon compte - FreshWipe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="js/navbar.js"></script>
+</head>
+<body>
+ <nav>
+    <ul>
+      <li id="accueil">
+        <div class="home">
+          <a href="../index.html">Accueil</a>
+        </div>
+      </li>
+      <li id="wipe" class="dropdown">
+        <div class="dropdown-toggle">Serveur</div>
+        <div class="dropdown-content">
+          <a href=".\pages\community.html">Officiel</a>
+          <a href=".\pages\community.html">Communautaire</a>
+          <a href=".\pages\modded.html">Moddé</a>
+        </div>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+      <li id="connexion" class="dropdown">
+        <div class="dropdown-toggle">Connexion</div>
+        <div class="dropdown-content">
+          <a href="../login.html">Connexion</a>
+          <a href="../registrer.html">Inscription</a>
+        </div>
+      </li>
+      <li id="user-info" class="user-dropdown">
+        <img src="/rust_hazmat_player.png" alt="Utilisateur" class="nav-avatar" />
+        <a href="/account.html"><span id="username">Mon compte</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/account.html">Mes favoris</a></li>
+          <li><a href="#" id="logout">Déconnexion</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+ <main>
+  <h1>Bienvenue sur votre compte</h1>
+
+  <!-- Informations affichées -->
+  <section class="user-info">
+    <h2>Mes informations</h2>
+    <p><strong>Pseudo :</strong> <span id="display-username"></span></p>
+    <p><strong>Email :</strong> <span id="display-email"></span></p>
+    <button id="editAccountBtn">Modifier mes informations</button>
+  </section>
+
+  <!-- Formulaire de modification caché -->
+  <section class="edit-account" id="editAccountSection" style="display: none;">
+    <h2>Modifier mes informations</h2>
+    <form id="editForm">
+      <div class="form-group">
+        <label for="edit-username">Pseudo :</label>
+        <input type="text" id="edit-username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="edit-email">Email :</label>
+        <input type="email" id="edit-email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="edit-password">Nouveau mot de passe :</label>
+        <input type="password" id="edit-password">
+      </div>
+
+      <button type="submit">Sauvegarder</button>
+    </form>
+  </section>
+
+  <!-- Favoris -->
+  <h2>Mes serveurs favoris</h2>
+  <div id="server-list"></div>
+
+  <!-- Sécurité -->
+  <div class="security-section">
+    <h2>Sécurité</h2>
+    <button id="logoutBtn">Déconnexion</button>
+    <button id="deleteAccountBtn" class="danger">Supprimer mon compte</button>
+  </div>
+</main>
+
+
+
+  <footer id="contact">
+  <a href="mailto:lglucagngr@gmail.com">Mail</a>
+  <a href="https://github.com/lucagngr">GitHub</a>
+  <a href="https://www.linkedin.com/in/luca-gngr-238a20330/">LinkedIn</a>
+</footer>
+
+
+  <script src="js/account.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
