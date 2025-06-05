@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Note = require('../models/Note');
+const Note = require('../models/note');
 
 // POST /api/rating : Enregistrer ou mettre à jour une note
 router.post('/', async (req, res) => {
