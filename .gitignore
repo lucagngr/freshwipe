@@ -12,3 +12,7 @@ package-lock.json
 
 # Dossier PostgreSQL local (si tu en as un)
 pgsql/
+
+# Dossier de build
+client.js
+bdd.sql
